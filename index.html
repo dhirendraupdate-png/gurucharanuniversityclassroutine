@@ -292,6 +292,259 @@
       .site-footer { padding: 4pt 0 0; color: #000; }
       .print-only { display: block; }
     }
+    /* ── Mobile responsive fix ───────────────────────────────────── */
+@media (max-width: 719px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .site-header {
+    overflow: hidden;
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    padding: 1.35rem 0 1.25rem;
+  }
+
+  .site-header h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.02;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .eyebrow {
+    max-width: 100%;
+    line-height: 1.5;
+  }
+
+  .header-meta {
+    max-width: 100%;
+    margin-top: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+  }
+
+  .pill {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 1rem;
+  }
+
+  .panel,
+  .status {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Current / next class */
+  .status {
+    padding: .9rem .85rem;
+  }
+
+  .status-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .status-grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .status-grid.two > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--rule-2);
+    padding-left: 0;
+    padding-top: .8rem;
+  }
+
+  .status-row {
+    min-width: 0;
+    gap: .25rem .6rem;
+  }
+
+  .status-time {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .status-main {
+    overflow-wrap: anywhere;
+  }
+
+  /* Today's classes */
+  .panel-head,
+  .panel-body {
+    min-width: 0;
+  }
+
+  .today-list {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .today-item {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 5rem minmax(0, 1fr);
+  }
+
+  .today-item > div {
+    min-width: 0;
+  }
+
+  .today-item .entries,
+  .today-item .chip {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .chip {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .chip .code,
+  .chip .name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Search + controls */
+  .toolbar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .toolbar-row {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .search {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .search input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filters {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile weekly routine cards */
+  .week-list {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .day-block {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: .9rem .85rem;
+  }
+
+  .cards {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .card {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 5rem minmax(0, 1fr);
+  }
+
+  .card > div {
+    min-width: 0;
+  }
+
+  .card .entries {
+    min-width: 0;
+  }
+
+  /* Prevent long practical/subject content from forcing width */
+  .practical {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Day view */
+  .day-view,
+  #day-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .day-tabs {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .site-footer {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 380px) {
+  .wrap {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .site-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .today-item,
+  .card {
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+  }
+
+  .today-item .t,
+  .card .time {
+    font-size: .78rem;
+  }
+
+  .chip {
+    font-size: .8rem;
+  }
+}
   </style>
 </head>
 <body>

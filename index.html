@@ -545,6 +545,170 @@
     font-size: .8rem;
   }
 }
+    /* ── Final mobile card + controls fix ─────────────────────────── */
+@media (max-width: 719px) {
+
+  /* Today's Classes must never exceed the phone width */
+  #today-panel,
+  #today-body,
+  .today-list,
+  .today-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .today-item {
+    display: grid;
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    gap: .55rem;
+    overflow: hidden;
+  }
+
+  .today-item > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .today-item .entries {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .today-item .chip {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .today-item .chip .code,
+  .today-item .chip .name {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .today-item .room {
+    flex: 0 0 auto;
+  }
+
+  /* Keep all weekly controls available on mobile */
+  .toolbar {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .toolbar-row {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .toolbar-row .seg {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .toolbar-row .seg button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .search input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .filters {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fchip {
+    flex: 0 0 auto;
+  }
+
+  /* Mobile weekly routine cards */
+  #week-view,
+  #week-list,
+  .week-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .day-block {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+  }
+
+  .card > div {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .card .entries {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .card .chip {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .today-item,
+  .card {
+    grid-template-columns: 4.35rem minmax(0, 1fr);
+  }
+
+  .today-item {
+    gap: .4rem;
+  }
+
+  .today-item .t,
+  .card .time {
+    font-size: .76rem;
+  }
+}
   </style>
 </head>
 <body>
